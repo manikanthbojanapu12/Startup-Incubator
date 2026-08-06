@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 - Page Not Found</title>
+
+<link rel="stylesheet" href="404.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--==============================
+404 PAGE
+===============================-->
+
+<section class="error-section">
+
+    <div class="error-bg"></div>
+
+    <div class="error-container">
+
+        <div class="error-content">
+
+            <span class="error-tag"
+                  data-aos="zoom-in">
+                ERROR 404
+            </span>
+
+            <h1 data-aos="fade-up"
+                data-aos-delay="200">
+                404
+            </h1>
+
+            <h2 data-aos="fade-up"
+                data-aos-delay="350">
+                Oops! Page Not Found
+            </h2>
+
+            <p data-aos="fade-up"
+               data-aos-delay="500">
+
+                The page you are looking for might have been removed,
+                renamed, or is temporarily unavailable.
+
+            </p>
+
+            <div class="error-buttons"
+                 data-aos="fade-up"
+                 data-aos-delay="700">
+
+                <a href="index.html" class="home-btn">
+                    <i class="fa-solid fa-house"></i>
+                    Go Home
+                </a>
+
+                <button class="back-btn"
+                        onclick="history.back()">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Go Back
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==============================
+AOS
+===============================-->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+
+duration:1200,
+once:true,
+offset:120,
+easing:"ease-in-out"
+
+});
+
+</script>
+
+</body>
+
+</html>

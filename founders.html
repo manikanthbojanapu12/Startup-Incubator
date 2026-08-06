@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Founders | Stackly Incubator</title>
+<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+<div class="sidebar-logo"><a href="admin.html"><img src="Stackly-logo.webp" alt="Stackly Logo"></a></div>
+<div class="close-sidebar" id="closeSidebar"><i class="fa-solid fa-xmark"></i></div>
+<ul class="sidebar-menu">
+<li><a href="admin.html"><i class="fa-solid fa-gauge-high"></i>Dashboard</a></li>
+<li><a href="founders.html"><i class="fa-solid fa-users"></i>Founders</a></li>
+<li><a href="mentors.html"><i class="fa-solid fa-user-tie"></i>Mentors</a></li>
+<li><a href="programs.html"><i class="fa-solid fa-rocket"></i>Programs</a></li>
+<li><a href="funding.html"><i class="fa-solid fa-chart-line"></i>Funding Pipeline</a></li>
+<li><a href="admin-settings.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
+<li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+</ul>
+</aside>
+<div class="main-content">
+<header class="topbar"><div class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></div><div class="page-title"><h2>Founders</h2></div><div class="topbar-right"><div class="admin-email"><i class="fa-solid fa-envelope"></i><span id="adminEmail">admin@gmail.com</span></div><div class="admin-profile"><i class="fa-solid fa-user-shield"></i></div></div></header>
+<section class="dashboard"><h1>Founder Pipeline</h1><p>Review founder onboarding, startup stage, focus areas and support status across the incubator.</p></section>
+<section class="dashboard-cards">
+<div class="card"><div class="card-icon"><i class="fa-solid fa-user-plus"></i></div><div class="card-content"><h3>New Applications</h3><h2>34</h2><span>This week</span></div></div>
+<div class="card"><div class="card-icon"><i class="fa-solid fa-rocket"></i></div><div class="card-content"><h3>Accepted Startups</h3><h2>18</h2><span>Current intake</span></div></div>
+<div class="card"><div class="card-icon"><i class="fa-solid fa-list-check"></i></div><div class="card-content"><h3>Due Diligence</h3><h2>11</h2><span>In review</span></div></div>
+</section>
+<section class="table-section"><h2>Founder Records</h2><table><thead><tr><th>ID</th><th>Startup</th><th>Founder</th><th>Stage</th><th>Status</th></tr></thead><tbody>
+<tr><td>F01</td><td>NovaLedger</td><td>Aarav Mehta</td><td>MVP</td><td><span class="active-status">Active</span></td></tr>
+<tr><td>F02</td><td>HealthBridge AI</td><td>Isha Raman</td><td>Pilot</td><td><span class="active-status">Active</span></td></tr>
+<tr><td>F03</td><td>SkillNest</td><td>Karan Shah</td><td>Validation</td><td><span class="pending-status">Review</span></td></tr>
+</tbody></table></section>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

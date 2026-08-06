@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly Business | Login & Register</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="login.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- AOS -->
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+</head>
+
+<body>
+
+<div class="bg-shape one"></div>
+<div class="bg-shape two"></div>
+
+<section class="auth-section">
+
+<div class="auth-container">
+
+<!--==========================
+LEFT PANEL
+===========================-->
+
+<!--==========================
+LEFT PANEL
+===========================-->
+
+<div class="left-panel" data-aos="fade-right">
+
+    <div class="left-panel-content">
+
+        <a href="index.html" class="logo">
+
+            <img src="Stackly-logo.webp"
+                 alt="Stackly Logo">
+
+        </a>
+
+        <img src="photo.webp"
+             class="welcome-image"
+             alt="Startup incubator workspace">
+
+        <p>
+            Manage your startup journey efficiently.
+Log in or create your account to access mentorship,
+startup resources, investor connections, and incubation services.
+        </p>
+
+        <a href="index.html" class="home-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back To Home
+
+        </a>
+
+    </div>
+
+</div>
+
+<!--==========================
+RIGHT PANEL
+===========================-->
+
+<div class="right-panel"
+data-aos="fade-left">
+
+<!-- Tabs -->
+
+<div class="tabs">
+
+<button
+class="tab active"
+id="loginTab">
+
+Login
+
+</button>
+
+<button
+class="tab"
+id="signupTab">
+
+Sign Up
+
+</button>
+
+</div>
+
+<!--==========================
+LOGIN FORM
+===========================-->
+
+<div
+class="form-container active"
+id="loginBox">
+
+<h2>
+
+Sign In
+
+</h2>
+
+<p>
+
+Welcome back! Login to continue.
+
+</p>
+
+<form id="loginForm">
+
+<!-- Role -->
+
+<label>
+
+Select Role
+
+</label>
+
+<div class="role-dropdown">
+
+<button
+type="button"
+class="dropdown-btn"
+id="loginRoleBtn">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<span id="loginRoleText">
+
+Choose Role
+
+</span>
+
+<i class="fa-solid fa-angle-down"></i>
+
+</button>
+
+<div
+class="dropdown-menu"
+id="loginDropdown">
+
+<div
+class="dropdown-item"
+data-role="Admin">
+
+<i class="fa-solid fa-user-shield"></i>
+
+Admin
+
+</div>
+
+<div
+class="dropdown-item"
+data-role="Client">
+
+<i class="fa-solid fa-user"></i>
+
+Client
+
+</div>
+
+</div>
+
+<input
+type="hidden"
+id="loginRole">
+
+</div>
+
+<!-- Email -->
+
+<label>
+
+Email Address
+
+</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+type="email"
+id="loginEmail"
+placeholder="Enter Email">
+
+</div>
+
+<!-- Password -->
+
+<label>
+
+Password
+
+</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Enter Password">
+
+<i
+class="fa-solid fa-eye toggle-password">
+
+</i>
+
+</div>
+
+<!-- Remember -->
+
+<div class="remember">
+
+<label>
+
+<input
+type="checkbox">
+
+Remember Me
+
+</label>
+
+<a href="404.html">
+
+Forgot Password?
+
+</a>
+
+</div>
+
+<button
+class="main-btn"
+type="submit">
+
+Login
+
+</button>
+
+<!-- Social -->
+
+<div class="divider">
+
+<span>
+
+OR
+
+</span>
+
+</div>
+
+<div class="social-login">
+
+    <a href="404.html" class="social-btn">
+        <i class="fab fa-google"></i>
+        <span>Google</span>
+    </a>
+
+    <a href="404.html" class="social-btn">
+        <i class="fab fa-microsoft"></i>
+        <span>Microsoft</span>
+    </a>
+
+</div>
+
+<p class="bottom-text">
+
+Don't have an account?
+
+<a href="#"
+id="showSignup">
+
+Create Account
+
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+<!-- ==========================
+SIGNUP FORM
+========================== -->
+
+<div class="form-container" id="signupBox">
+
+    <h2>Create Account</h2>
+
+    <p>Create your Stackly Business account.</p>
+
+    <form id="signupForm">
+
+        <!-- Full Name -->
+
+        <label>Full Name</label>
+
+        <div class="input-box">
+
+            <i class="fa-solid fa-user"></i>
+
+            <input
+                type="text"
+                id="signupName"
+                placeholder="Enter Full Name"
+                required>
+
+        </div>
+
+        <!-- Role -->
+
+        <label>Select Role</label>
+
+        <div class="role-dropdown">
+
+            <button
+                type="button"
+                class="dropdown-btn"
+                id="signupRoleBtn">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                <span id="signupRoleText">
+                    Choose Role
+                </span>
+
+                <i class="fa-solid fa-angle-down"></i>
+
+            </button>
+
+            <div
+                class="dropdown-menu"
+                id="signupDropdown">
+
+                <div
+                    class="dropdown-item"
+                    data-role="Admin">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    Admin
+
+                </div>
+
+                <div
+                    class="dropdown-item"
+                    data-role="Client">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Client
+
+                </div>
+
+            </div>
+
+            <input
+                type="hidden"
+                id="signupRole">
+
+        </div>
+
+        <!-- Email -->
+
+        <label>Email Address</label>
+
+        <div class="input-box">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Enter Email"
+                required>
+
+        </div>
+
+        <!-- Phone -->
+
+        <label>Phone Number</label>
+
+        <div class="input-box">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <input
+                type="tel"
+                id="signupPhone"
+                placeholder="Enter Phone Number"
+                maxlength="10"
+                required>
+
+        </div>
+
+        <!-- Password -->
+
+        <label>Password</label>
+
+        <div class="input-box">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create Password"
+                required>
+
+            <i
+                class="fa-solid fa-eye toggle-password">
+            </i>
+
+        </div>
+
+        <!-- Confirm Password -->
+
+        <label>Confirm Password</label>
+
+        <div class="input-box">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                required>
+
+            <i
+                class="fa-solid fa-eye toggle-password">
+            </i>
+
+        </div>
+
+        <!-- Terms -->
+
+        <div class="remember">
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    required>
+
+                <a href="404.html">
+
+                    I agree to the Terms & Conditions
+
+                </a>
+
+            </label>
+
+        </div>
+
+        <!-- Button -->
+
+        <button
+            class="main-btn"
+            type="submit">
+
+            Create Account
+
+        </button>
+
+        <!-- Divider -->
+
+        <div class="divider">
+
+            <span>OR</span>
+
+        </div>
+
+        <!-- Social -->
+
+        <div class="social-login">
+
+    <a href="404.html" class="social-btn">
+        <i class="fab fa-google"></i>
+        <span>Google</span>
+    </a>
+
+    <a href="404.html" class="social-btn">
+        <i class="fab fa-microsoft"></i>
+        <span>Microsoft</span>
+    </a>
+
+</div>
+
+        <p class="bottom-text">
+
+            Already have an account?
+
+            <a href="#"
+                id="showLogin">
+
+                Login
+
+            </a>
+
+        </p>
+
+    </form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AOS -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1000,
+    once:true
+});
+</script>
+
+<!-- JavaScript -->
+
+<script src="login.js"></script>
+
+</body>
+</html>
