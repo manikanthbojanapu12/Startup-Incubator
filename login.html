@@ -324,6 +324,7 @@ SIGNUP FORM
             <input
                 type="text"
                 id="signupName"
+                pattern="[A-Za-z ]+"
                 placeholder="Enter Full Name"
                 required>
 
@@ -409,6 +410,8 @@ SIGNUP FORM
             <input
                 type="tel"
                 id="signupPhone"
+                inputmode="numeric"
+                pattern="[0-9]{10}"
                 placeholder="Enter Phone Number"
                 maxlength="10"
                 required>
@@ -463,6 +466,7 @@ SIGNUP FORM
 
                 <input
                     type="checkbox"
+                    id="termsCheck"
                     required>
 
                 <a href="404.html">

@@ -4,17 +4,28 @@ const menuToggle=document.getElementById("menuToggle");
 
 const closeSidebar=document.getElementById("closeSidebar");
 
-menuToggle.onclick=function(){
-
-sidebar.classList.add("active");
-
+if (menuToggle && sidebar) {
+    menuToggle.addEventListener("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        sidebar.classList.add("active");
+    });
 }
 
-closeSidebar.onclick=function(){
-
-sidebar.classList.remove("active");
-
+if (closeSidebar && sidebar) {
+    closeSidebar.addEventListener("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        sidebar.classList.remove("active");
+    });
 }
+
+document.querySelectorAll(".admin-profile").forEach(function(profileButton){
+    profileButton.addEventListener("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    });
+});
 
 // ================================
 // Active Sidebar Menu

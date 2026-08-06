@@ -31,6 +31,10 @@ const dots = document.querySelectorAll(".dot");
 let current = 0;
 
 function changeVideo() {
+    if (!videos.length || !dots.length) {
+        return;
+    }
+
     videos[current].classList.remove("active");
     dots[current].classList.remove("active");
 
@@ -40,7 +44,9 @@ function changeVideo() {
     dots[current].classList.add("active");
 }
 
-setInterval(changeVideo, 6000);
+if (videos.length && dots.length) {
+    setInterval(changeVideo, 6000);
+}
 
 // Dot Click
 dots.forEach((dot, index) => {
@@ -115,9 +121,10 @@ newsletterForm.addEventListener("submit", function(e){
 
         window.location.href = "404.html";
 
-    },2000);
+},2000);
 
 });
+}
 
 /*====================================
 CONTACT FORM VALIDATION
@@ -126,6 +133,22 @@ CONTACT FORM VALIDATION
 const contactForm = document.getElementById("contactForm");
 
 if(contactForm){
+
+const contactNameInput=document.getElementById("name");
+const contactPhoneInput=document.getElementById("phone");
+const contactMessageInput=document.getElementById("message");
+
+if(contactNameInput){
+contactNameInput.addEventListener("input",function(){
+this.value=this.value.replace(/[^A-Za-z\s]/g,"");
+});
+}
+
+if(contactPhoneInput){
+contactPhoneInput.addEventListener("input",function(){
+this.value=this.value.replace(/\D/g,"").slice(0,10);
+});
+}
 
 contactForm.addEventListener("submit",function(e){
 
@@ -206,6 +229,14 @@ formMessage.innerHTML="Please enter your message.";
 return;
 }
 
+if(message.length<10){
+formMessage.innerHTML="Message should contain at least 10 characters.";
+if(contactMessageInput){
+contactMessageInput.focus();
+}
+return;
+}
+
 /* Success */
 
 formMessage.style.color="#28a745";
@@ -235,9 +266,12 @@ window.addEventListener("load", function(){
 
     setTimeout(function(){
 
-        document.getElementById("loader").classList.add("hide");
+        const loader=document.getElementById("loader");
+
+        if(loader){
+            loader.classList.add("hide");
+        }
 
     },1500); // 2 seconds
 
 });
-}

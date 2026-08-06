@@ -167,8 +167,6 @@ CONTACT SECTION
                     <h4>Office Address</h4>
 
                     <p>
-                        No.45 Anna Salai,
-                        Teynampet,
                         Chennai - 600018,
                         Tamil Nadu.
                     </p>
@@ -239,12 +237,13 @@ CONTACT SECTION
         <input
             type="text"
             id="name"
-            placeholder="Your Name">
+            pattern="[A-Za-z ]+"
+            placeholder="Your Name" required>
 
         <input
             type="email"
             id="email"
-            placeholder="Email Address">
+            placeholder="Email Address" required>
 
     </div>
 
@@ -253,19 +252,22 @@ CONTACT SECTION
         <input
             type="tel"
             id="phone"
-            placeholder="Phone Number">
+            inputmode="numeric"
+            pattern="[0-9]{10}"
+            placeholder="Phone Number" maxlength="10" required>
 
         <input
             type="text"
             id="subject"
-            placeholder="Subject">
+            placeholder="Subject" required>
 
     </div>
 
     <textarea
         id="message"
         rows="6"
-        placeholder="Write Your Message..."></textarea>
+        minlength="10"
+        placeholder="Write Your Message..." required></textarea>
 
     <button type="submit">
         Send Message

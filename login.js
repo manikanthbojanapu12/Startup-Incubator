@@ -163,6 +163,28 @@ const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const phoneRegex=/^[0-9]{10}$/;
 
+const signupNameInput=document.getElementById("signupName");
+const signupPhoneInput=document.getElementById("signupPhone");
+const termsCheck=document.getElementById("termsCheck");
+
+if(signupNameInput){
+    signupNameInput.addEventListener("input",function(){
+        this.value=this.value.replace(/[^A-Za-z\s]/g,"");
+    });
+}
+
+if(signupPhoneInput){
+    signupPhoneInput.addEventListener("input",function(){
+        this.value=this.value.replace(/\D/g,"").slice(0,10);
+    });
+}
+
+if(termsCheck){
+    termsCheck.addEventListener("click",function(){
+        window.location.href="404.html";
+    });
+}
+
 //=========================
 // SIGNUP
 //=========================

@@ -156,6 +156,17 @@ TOPBAR
     font-size:26px;
     cursor:pointer;
     color:#20242c;
+    width:42px;
+    height:42px;
+    border-radius:10px;
+    align-items:center;
+    justify-content:center;
+    transition:.3s ease;
+}
+
+.menu-toggle:hover{
+    background:#eef4ff;
+    color:#1266d6;
 }
 
 .topbar-right{
@@ -368,7 +379,7 @@ RESPONSIVE
 }
 
 .menu-toggle{
-    display:block;
+    display:flex;
 }
 
 .topbar{
