@@ -603,10 +603,59 @@ MOBILE
 
 @media(max-width:768px){
 
-.page-banner{
-    min-height:270px;
-    height:34vh;
-    margin-top:62px;
+.about-page{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.about-page header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:10000;
+    min-height:72px;
+}
+
+.about-page .logo{
+    display:flex;
+    align-items:center;
+    min-width:0;
+    flex:0 1 auto;
+}
+
+.about-page .logo img{
+    width:230px;
+    max-width:calc(100vw - 98px);
+    height:auto;
+    display:block;
+    filter:brightness(0) saturate(100%) invert(34%) sepia(91%) saturate(2600%) hue-rotate(200deg) brightness(96%) contrast(112%) drop-shadow(0 8px 20px rgba(18,102,214,.38));
+}
+
+.about-page .header-right{
+    flex:0 0 auto;
+}
+
+.about-page .menu-btn{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.about-page .page-banner{
+    min-height:330px;
+    height:42vh;
+    margin-top:66px;
+    padding:30px 0;
+    background-position:center 64%;
+}
+
+.about-page .banner-content{
+    width:100%;
+    max-width:100%;
+    padding:0 18px;
 }
 
 .banner-content h1{
@@ -627,6 +676,32 @@ MOBILE
     font-size:14px;
 }
 
+.about-page .about-stats-section,
+.about-page .about-timeline-section,
+.about-page .about-support-section,
+.about-page .about-us-section,
+.about-page .about-section,
+.about-page .team-section,
+.about-page .about-mission-section,
+.about-page .newsletter-section{
+    width:100%;
+    overflow:hidden;
+}
+
+.about-page .stats-band,
+.about-page .timeline,
+.about-page .about-support-container,
+.about-page .about-us-container,
+.about-page .about-container,
+.about-page .team-container,
+.about-page .about-mission-layout,
+.about-page .newsletter-container,
+.about-page .footer-container{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+}
+
 }
 
 /*==================================
@@ -635,9 +710,21 @@ SMALL MOBILE
 
 @media(max-width:480px){
 
-.page-banner{
-    min-height:245px;
-    height:31vh;
+.about-page header{
+    min-height:68px;
+}
+
+.about-page .logo img{
+    width:220px;
+    max-width:calc(100vw - 88px);
+}
+
+.about-page .page-banner{
+    min-height:300px;
+    height:40vh;
+    margin-top:60px;
+    padding:26px 0;
+    background-position:center 66%;
 }
 
 .banner-content h1{
@@ -2471,6 +2558,229 @@ SMALL MOBILE
 .blog-topic-card,
 .contact-support-card{
     padding:24px;
+}
+
+}
+
+/*==================================
+ABOUT PAGE 320PX FIXES
+==================================*/
+
+@media(max-width:360px){
+
+.about-page header{
+    padding:6px 10px;
+    min-height:66px;
+}
+
+.about-page .logo img{
+    width:210px;
+    max-width:calc(100vw - 78px);
+}
+
+.about-page .menu-btn{
+    font-size:25px;
+    width:36px;
+    height:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.about-page .navbar ul{
+    gap:18px;
+}
+
+.about-page .navbar ul li a{
+    font-size:18px;
+    padding:10px 18px;
+}
+
+.about-page .mobile-login-btn{
+    width:min(190px,calc(100vw - 40px));
+    height:46px;
+    margin-top:34px;
+}
+
+.about-page .page-banner{
+    min-height:285px;
+    height:auto;
+    margin-top:58px;
+    padding:34px 0 28px;
+    background-position:center 68%;
+}
+
+.about-page .banner-content{
+    width:100%;
+    padding:0 14px;
+}
+
+.about-page .banner-content span,
+.about-page .about-small-title,
+.about-page .about-tag,
+.about-page .team-tag,
+.about-page .eyebrow,
+.about-page .section-head .eyebrow{
+    max-width:100%;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    letter-spacing:1px;
+}
+
+.about-page .banner-content h1{
+    font-size:28px;
+}
+
+.about-page .breadcrumb{
+    gap:8px;
+}
+
+.about-page .about-stats-section,
+.about-page .about-timeline-section,
+.about-page .about-support-section,
+.about-page .about-us-section,
+.about-page .about-section,
+.about-page .team-section,
+.about-page .about-mission-section,
+.about-page .newsletter-section{
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.about-page .stats-band,
+.about-page .timeline,
+.about-page .about-support-container,
+.about-page .about-us-container,
+.about-page .about-container,
+.about-page .team-container,
+.about-page .about-mission-layout,
+.about-page .newsletter-container,
+.about-page .footer-container{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+}
+
+.about-page .stat,
+.about-page .tl-item,
+.about-page .about-support-card,
+.about-page .about-feature,
+.about-page .team-card,
+.about-page .newsletter-container{
+    border-radius:8px;
+}
+
+.about-page .tl-item{
+    padding:20px 16px 20px 46px;
+}
+
+.about-page .timeline::before{
+    left:17px;
+}
+
+.about-page .tl-dot{
+    left:11px;
+}
+
+.about-page .about-support-content h2,
+.about-page .about-mission-section h2,
+.about-page .section-head h2,
+.about-page .about-us-content h2,
+.about-page .about-content h2,
+.about-page .team-heading h2,
+.about-page .newsletter-text h2{
+    font-size:24px !important;
+    line-height:1.28 !important;
+}
+
+.about-page .about-support-content p,
+.about-page .about-mission-section p,
+.about-page .about-us-content p,
+.about-page .about-content p,
+.about-page .team-heading p,
+.about-page .newsletter-text p,
+.about-page .banner-content p{
+    font-size:13px !important;
+    line-height:1.65 !important;
+}
+
+.about-page .about-feature{
+    gap:10px;
+    padding:12px;
+}
+
+.about-page .about-feature i{
+    width:36px;
+    height:36px;
+    min-width:36px;
+}
+
+.about-page .about-feature span,
+.about-page .about-item span{
+    font-size:13px;
+    overflow-wrap:anywhere;
+}
+
+.about-page .about-btn-primary,
+.about-page .about-btn-secondary,
+.about-page .about-btn1,
+.about-page .about-btn2,
+.about-page .about-support-btn,
+.about-page .btn-primary,
+.about-page .btn-ghost{
+    width:100%;
+    min-height:44px;
+    padding:12px 14px;
+    font-size:14px;
+    text-align:center;
+}
+
+.about-page .about-us-image,
+.about-page .about-image{
+    min-height:220px;
+}
+
+.about-page .team-image img{
+    height:260px;
+}
+
+.about-page .team-content{
+    padding:18px 14px;
+}
+
+.about-page .about-mission-layout,
+.about-page .about-mission-gallery{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+}
+
+.about-page .doc-split-card{
+    grid-column:auto !important;
+    height:220px !important;
+}
+
+.about-page .about-mission-actions{
+    display:flex !important;
+    flex-direction:column;
+    gap:12px !important;
+}
+
+.about-page .newsletter-container{
+    padding:28px 14px;
+}
+
+.about-page .newsletter-form{
+    min-width:0;
+}
+
+.about-page .newsletter-form input{
+    min-width:0;
+}
+
+.about-page .footer-section{
+    padding-left:10px;
+    padding-right:10px;
 }
 
 }

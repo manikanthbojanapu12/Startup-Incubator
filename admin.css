@@ -52,7 +52,7 @@ SIDEBAR
 }
 
 .sidebar-logo img{
-    width:170px;
+    width:195px;
     transition:.4s;
     filter:brightness(0) saturate(100%) invert(54%) sepia(85%) saturate(1648%) hue-rotate(352deg) brightness(101%) contrast(96%) drop-shadow(0 8px 22px rgba(249,115,22,.3));
 }
@@ -480,7 +480,7 @@ SMALL MOBILE
 }
 
 .sidebar-logo img{
-    width:140px;
+    width:165px;
 }
 
 }
